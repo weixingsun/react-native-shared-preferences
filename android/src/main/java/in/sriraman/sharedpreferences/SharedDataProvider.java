@@ -18,7 +18,7 @@ public class SharedDataProvider {
         return results;
     }
 
-		public static String[][] getAllSharedValues() {
+    public static String[][] getAllSharedValues() {
         Map<String, ?> keyValues = SharedHandler.getInstance().getAllSharedData();
         List<String> keys = new ArrayList<>(keyValues.keySet());
         String[][] results = new String[keys.size()][2];
@@ -28,8 +28,8 @@ public class SharedDataProvider {
         }
         return results;
     }
-		
-		/*public static String[] getMultiSharedValues(String[] keys) {
+
+    /*public static String[] getMultiSharedValues(String[] keys) {
         SharedHandler sharedHandler = SharedHandler.getInstance();
         String[] results = new String[keys.length];
         for (int i = 0; i < keys.length; i++) {
@@ -70,5 +70,7 @@ public class SharedDataProvider {
     public static void clear() {
         SharedHandler.getInstance().clear();
     }
-
+    public static void deleteSharedValue(String key) {
+        SharedHandler.getInstance().deleteKey(key);
+    }
 }

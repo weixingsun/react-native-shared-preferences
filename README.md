@@ -78,7 +78,7 @@ SharedPreferences.getItem("key", function(value){
 #### Get multiple items
 
 ```javascript
-SharedPreferences.getItems(["key1","key2"], function(values){
+SharedPreferences.items(["key1","key2"], function(values){
   console.log(values)
 });
 ```

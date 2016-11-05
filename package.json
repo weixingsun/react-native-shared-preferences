@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/sriraman/react-native-shared-preferences.git"
+    "url": "git+ssh://git@github.com/weixingsun/react-native-shared-preferences.git"
   },
   "keywords": [
     "React",

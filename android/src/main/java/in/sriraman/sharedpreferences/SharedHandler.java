@@ -60,6 +60,11 @@ public class SharedHandler {
         return mSharedPreferences.getInt(key, 0);
     }
 
+    public void deleteKey(String key) {
+        SharedPreferences.Editor editor = mSharedPreferences.edit();
+        editor.remove(key);
+        editor.commit();
+    }
     public void clear() {
         mSharedPreferences.edit().clear().commit();
     }
@@ -67,5 +72,4 @@ public class SharedHandler {
     public Map<String, ?> getAllSharedData(){
         return mSharedPreferences.getAll();
     }
-
 }
